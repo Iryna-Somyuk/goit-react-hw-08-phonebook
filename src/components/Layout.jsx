@@ -6,14 +6,16 @@ import { Footer } from './Footer/Footer';
 
 export const Layout = () => {
   return (
-    <div>
+    <>
       <AppBar />
+      <main style={{ maxWidth: 960, margin: '0 auto', padding: '60px 16px' }}>
       <Suspense fallback={null}>
         <Outlet />
       </Suspense>
+      </main>
       <Footer />
       <Toaster position="top-right" reverseOrder={false} />
-    </div>
+    </>
   );
 };
 
