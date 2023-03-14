@@ -16,7 +16,7 @@ import { register } from 'redux/auth/operations';
 const schema = yup.object().shape({
   name: yup.string().required(),
   email: yup.string().required(),
-  password: yup.string().min(6, 'Password should be of minimum 6 characters length').required(),
+  password: yup.string().required(),
 });
 
 const initialValues = {
@@ -64,12 +64,11 @@ export const RegisterForm = () => {
             <ErrorMes name="email" component="span" />
           </Label>
           <Label>
-            Password{' '}
+            Password
             <Input
               type="password"
               name="password"
-              pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-              title="Password must include at least one capital letter and one digit"
+              title="Please enter a valid password"
               required
             />
             <ErrorMes name="password" component="span" />
@@ -78,20 +77,5 @@ export const RegisterForm = () => {
         </FormContainer>
       </Formik>
     </>
-    // <Form onSubmit={handleSubmit} autoComplete="off">
-    //   <Label>
-    //     Username
-    //     <input type="text" name="name" />
-    //   </Label>
-    //   <Label>
-    //     Email
-    //     <input type="email" name="email" />
-    //   </Label>
-    //   <Label>
-    //     Password
-    //     <input type="password" name="password" />
-    //   </Label>
-    //   <button type="submit">Register</button>
-    // </Form>
   );
 };

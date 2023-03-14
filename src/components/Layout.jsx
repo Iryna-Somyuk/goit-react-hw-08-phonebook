@@ -6,7 +6,7 @@ import { Footer } from './Footer/Footer';
 
 export const Layout = () => {
   return (
-    <div style={{ maxWidth: 960, margin: '0 auto', padding: '0 16px' }}>
+    <div>
       <AppBar />
       <Suspense fallback={null}>
         <Outlet />
@@ -16,3 +16,5 @@ export const Layout = () => {
     </div>
   );
 };
+
+// style={{ maxWidth: 960, margin: '0 auto', padding: '0 16px' }}
