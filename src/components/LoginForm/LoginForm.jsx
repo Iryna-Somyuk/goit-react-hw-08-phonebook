@@ -1,12 +1,5 @@
-import { Formik } from 'formik';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as yup from 'yup';
-import {
-  FormContainer,
-  Label,
-  Input,
-  ErrorMes,
-  Btn,
-} from '../PhonebookForm/PhonebookForm.styled';
 
 import { useDispatch } from 'react-redux';
 import { logIn } from 'redux/auth/operations';
@@ -36,30 +29,30 @@ export const LoginForm = () => {
         validationSchema={schema}
         onSubmit={handleSubmit}
       >
-        <FormContainer>
-          <Label>
+        <Form className='flex flex-col'>
+          <label className='flex flex-col gap-1 mb-2 font-medium text-lg'>
             Email
-            <Input
+            <Field className='p-1 text-lg border-2 border-solid w-72 rounded'
               type="email"
               name="email"
               pattern="/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/"
               title="Please enter a valid email"
               required
             />
-            <ErrorMes name="email" component="span" />
-          </Label>
-          <Label>
+            <ErrorMessage className='text-rose-700 text-xs font-normal' name="email" component="span" />
+          </label>
+          <label className='flex flex-col gap-1 mb-4 font-medium text-lg'>
             Password
-            <Input
+            <Field className='p-1 text-lg border-2 border-solid w-72 rounded'
               type="password"
               name="password"
               title="Please enter a valid password"
               required
             />
-            <ErrorMes name="password" component="span" />
-          </Label>
-          <Btn type="submit">Log In</Btn>
-        </FormContainer>
+            <ErrorMessage className='text-rose-700 text-xs font-normal' name="password" component="span" />
+          </label>
+          <button className ='text-gray-dark w-20 h-8 px-2 py-1 text-sm border-2 border-gray-dark rounded-lg hover:text-orange hover:border-orange curcor-pointer' type="submit">Log In</button>
+        </Form>
       </Formik>
     </>
   );

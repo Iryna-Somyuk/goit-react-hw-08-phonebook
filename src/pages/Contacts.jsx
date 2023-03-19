@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet';
+
 import { PhonebookForm } from '../components/PhonebookForm/PhonebookForm';
 import { ContactsList } from '../components/ContactsList/ContactsList';
 import { Filter } from '../components/Filter/Filter';
@@ -18,9 +18,6 @@ const Contacts = () => {
   }, [dispatch]);
 
   return (<>
-    <Helmet>
-    <title>Your contacts</title>
-  </Helmet>
     <Сontainer>
       <Section title="Phonebook">
         <PhonebookForm />

@@ -1,12 +1,6 @@
-import { Formik } from 'formik';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as yup from 'yup';
-import {
-  FormContainer,
-  Label,
-  Input,
-  ErrorMes,
-  Btn,
-} from './PhonebookForm.styled';
+
 import { useSelector, useDispatch } from 'react-redux';
 import { selectContacts } from 'redux/selector';
 import toast, { Toaster } from 'react-hot-toast';
@@ -45,31 +39,31 @@ export const PhonebookForm = () => {
         validationSchema={schema}
         onSubmit={handleSubmit}
       >
-        <FormContainer>
-          <Label>
+        <Form className='flex flex-col'>
+          <label className='flex flex-col gap-1 mb-3 font-normal text-lg'>
             Name
-            <Input
+            <Field className='p-1 text-lg border-2 rounded w-72'
               type="text"
               name="name"
               pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
               title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
               required
             />
-            <ErrorMes name="name" component="span" />
-          </Label>
-          <Label>
+            <ErrorMessage className='text-rose-700 text-xs font-normal' name="name" component="span" />
+          </label>
+          <label className='flex flex-col gap-1 mb-3 font-normal text-lg'>
             Number{' '}
-            <Input
+            <Field className='p-1 text-lg border-2 rounded w-72'
               type="tel"
               name="number"
               pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
               title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
               required
             />
-            <ErrorMes name="number" component="span" />
-          </Label>
-          <Btn type="submit">Add contact</Btn>
-        </FormContainer>
+            <ErrorMessage className='text-rose-700 text-xs font-normal' name="number" component="span" />
+          </label>
+          <button className='p-1 justify-center items-center w-28 h-8 border-none rounded text-black text-sm bg-fuchsia-500 hover:bg-fuchsia-400' type="submit">Add contact</button>
+        </Form>
       </Formik>
       <Toaster position="top-center" reverseOrder={true} />
     </>

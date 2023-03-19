@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { ContactItem, ContactInfo, DeleteBtn } from './Contact.styled';
 import { deleteContact } from 'redux/operations';
 import { Modal } from 'components/Modal/Modal';
 import { EditForm } from 'components/EditingContacts/EditingContacts';
@@ -32,13 +31,15 @@ const clickBtnHandler = ({ currentTarget: { name } }) => {
 
   return (
     <>
-    <ContactItem>
-      <ContactInfo>
+    <li className=' inline-flex flex-row gap-5 items-center justify-between'>
+      <span className='text-sm font-medium text-black'>
         {name}: {number}
-      </ContactInfo>
-      <DeleteBtn type="button" name="edit" onClick={clickBtnHandler}>Edit</DeleteBtn>
-      <DeleteBtn onClick={handleDeleteContact}>Delete</DeleteBtn>
-    </ContactItem>
+      </span>
+      <div>
+      <button className='p-1 justify-center items-center w-16 h-7 border-none rounded text-black text-sm bg-fuchsia-500 hover:bg-fuchsia-400' type="button" name="edit" onClick={clickBtnHandler}>Edit</button>
+      <button className='p-1 ml-2 justify-center items-center w-16 h-7 border-none rounded text-black text-sm bg-fuchsia-500 hover:bg-fuchsia-400' onClick={handleDeleteContact}>Delete</button>
+      </div>
+    </li>
     {contactId && btnName === 'edit' && (
       <Modal onClose={closeModal}>
           <EditForm id={contactId} onClose={closeModal} />

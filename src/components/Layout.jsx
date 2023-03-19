@@ -7,13 +7,15 @@ import { Footer } from './Footer/Footer';
 export const Layout = () => {
   return (
     <>
+    <div className='mx-auto min-h-screen flex flex-col'>
       <AppBar />
-      <main style={{ maxWidth: 960, margin: '0 auto', padding: '60px 16px' }}>
+      <main className='container flex w-full py-4 flex-grow justify-between'>
       <Suspense fallback={null}>
         <Outlet />
       </Suspense>
       </main>
       <Footer />
+      </div>
       <Toaster position="top-right" reverseOrder={false} />
     </>
   );

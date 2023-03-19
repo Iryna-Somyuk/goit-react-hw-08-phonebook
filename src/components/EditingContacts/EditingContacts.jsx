@@ -4,13 +4,6 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { editingContact } from 'redux/operations';
 import { selectContacts } from 'redux/selector';
-import {
-    EditFormStyle,
-    EditFormLabel,
-    EditFormInput,
-    EditFormBtnList,
-    EditFormButton,
-} from './EditingContacts.styled';
 
 export const EditForm = ({ id, onClose }) => {
     const dispatch = useDispatch();
@@ -49,10 +42,10 @@ export const EditForm = ({ id, onClose }) => {
     return (
         <>
             {' '}
-            <EditFormStyle onSubmit={handleSubmit} autoComplete="off">
-                <EditFormLabel>
+            <form className=' w-72 flex flex-col items-center border-2 p-5 rounded my-0 mx-auto ' onSubmit={handleSubmit} autoComplete="off">
+                <label className='w-52  flex flex-col gap-1 mb-4 text-xs font-normal capitalize text-black'>
                     Name
-                    <EditFormInput
+                    <input className=' w-full p-1 text-xs font-normal border-2 border-solid  rounded'
                         name="name"
                         value={editName}
                         pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -61,10 +54,10 @@ export const EditForm = ({ id, onClose }) => {
                         onChange={handleChange}
                         placeholder="Enter name"
                     />
-                </EditFormLabel>
-                <EditFormLabel>
+                </label>
+                <label className='w-52 flex flex-col gap-1 mb-4 text-xs font-normal capitalize text-black'>
                     Number
-                    <EditFormInput
+                    <input className=' w-full p-1 text-xs font-normal border-2 border-solid  rounded'
                         type="tel"
                         name="number"
                         value={editNumber}
@@ -74,24 +67,24 @@ export const EditForm = ({ id, onClose }) => {
                         onChange={handleChange}
                         placeholder="000-00-00"
                     />
-                </EditFormLabel>
-                <EditFormBtnList>
+                </label>
+                <ul className='flex justify-around w-full mt-5'>
                     <li>
-                        <EditFormButton type="submit" text="Edit">
+                        <button className='text-gray-dark w-20 h-8 px-2 py-1 text-sm border-2 border-gray-dark rounded-lg hover:text-orange hover:border-orange curcor-pointer' type="submit" text="Edit">
                             Edit
-                        </EditFormButton>
+                        </button>
                     </li>
                     <li>
-                        <EditFormButton
+                        <button className='text-gray-dark w-20 h-8 px-2 py-1 text-sm border-2 border-gray-dark rounded-lg hover:text-orange hover:border-orange curcor-pointer'
                             type="button"
                             text="Cancel"
                             onClick={onClose}
                         >
                             Cancel
-                        </EditFormButton>
+                        </button>
                     </li>
-                </EditFormBtnList>
-            </EditFormStyle>
+                </ul>
+            </form>
         </>
     );
 };
