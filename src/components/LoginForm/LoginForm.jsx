@@ -23,13 +23,13 @@ export const LoginForm = () => {
   };
 
   return (
-    <>
+    <div className=' flex flex-col justify-between items-center h-96 p-4  bg-slate-600 rounded-2xl border-2 border-sky-700'>
       <Formik
         initialValues={initialValues}
         validationSchema={schema}
         onSubmit={handleSubmit}
       >
-        <Form className='flex flex-col'>
+        <Form className='flex flex-col h-72 mb-5 p-4 bg-white rounded-2xl border-2 border-sky-700'>
           <label className='flex flex-col gap-1 mb-2 font-medium text-lg'>
             Email
             <Field className='p-1 text-lg border-2 border-solid w-72 rounded'
@@ -51,9 +51,11 @@ export const LoginForm = () => {
             />
             <ErrorMessage className='text-rose-700 text-xs font-normal' name="password" component="span" />
           </label>
-          <button className ='text-gray-dark w-20 h-8 px-2 py-1 text-sm border-2 border-gray-dark rounded-lg hover:text-orange hover:border-orange curcor-pointer' type="submit">Log In</button>
+          <button className ='text-gray-dark w-20 h-8 px-2 py-1 text-sm border-2 border-gray-dark rounded-lg hover:text-orange hover:border-orange curcor-pointer' type="submit" onClick={handleSubmit}>Log In</button>       
         </Form>
       </Formik>
-    </>
+      <button className='text-gray-dark w-20 h-8 px-2 py-1 text-sm border-2 border-gray-dark rounded-lg hover:text-orange hover:border-orange curcor-pointer' type='button'> </button>
+     
+    </div>
   );
 };

@@ -3,6 +3,7 @@ import * as yup from 'yup';
 
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/operations';
+import imageRegister  from '../../images/imageRegister.jpg';
 
 const schema = yup.object().shape({
   name: yup.string().required(),
@@ -25,13 +26,14 @@ export const RegisterForm = () => {
   };
 
   return (
-    <>
+    <div className='relative flex flex-grow justify-between items-center w-2/4 text-left  items-start'>
+    <div className=' flex flex-col justify-between items-center h-full p-4  bg-slate-600 rounded-2xl border-2 border-sky-700'>
       <Formik
         initialValues={initialValues}
         validationSchema={schema}
         onSubmit={handleSubmit}
       >
-        <Form className="flex flex-col">
+        <Form className="flex flex-col h-80 mb-5 p-4 bg-white rounded-2xl border-2 border-sky-700">
           <label className="flex flex-col gap-1 mb-2 font-medium text-lg">
             Name
             <Field
@@ -87,6 +89,11 @@ export const RegisterForm = () => {
           </button>
         </Form>
       </Formik>
-    </>
+      <button className='text-gray-dark w-20 h-8 px-2 py-1 text-sm border-2 border-gray-dark rounded-lg hover:text-orange hover:border-orange curcor-pointer' type='button'> </button>
+    </div>
+    <div className='flex w-2/4'>
+<img src={imageRegister} alt='' className='object-cover'/>
+      </div>
+    </div>
   );
 };
