@@ -33,7 +33,7 @@ export const RegisterForm = () => {
         validationSchema={schema}
         onSubmit={handleSubmit}
       >
-        <Form className="flex flex-col h-80 mb-5 p-4 bg-white rounded-2xl border-2 border-sky-700">
+        <Form className="flex flex-col h-96 mb-5 p-4 bg-white rounded-2xl border-2 border-sky-700">
           <label className="flex flex-col gap-1 mb-2 font-medium text-lg">
             Name
             <Field
