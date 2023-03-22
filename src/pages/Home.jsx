@@ -3,7 +3,7 @@ import imgHomePage from '../images/imgHomePage.jpg';
 const Home = () => {
     return (<>
       <div className="relative flex flex-col w-2/4 text-left  items-start mt-20 ">
-        <img src={imgPhonebook} alt="Phonebook" width={100} className='mb-4 flex justify-center items-center'/>
+        {/* <img src={imgPhonebook} alt="Phonebook" width={100} className='mb-4 flex justify-center items-center'/> */}
         <h1 className="text-2xl font-black mb-2 fontFamily-serif">
         Welcome to the <span className="uppercase text-sky-600">phonebook</span> application!{' '}
         </h1>
@@ -12,7 +12,7 @@ Allowing you to add new contacts and edit existing ones, view lists and more, an
 <p className='text-lg text-justify indent-9'>To start working with the Phonebook, you need to
 </p><a className="text-lg text-sky-700 underline italic" href="/goit-react-hw-08-phonebook/register">Register.</a>
       </div>
-      <div className='flex w-2/4'>
+      <div className='hidden md:flex w-2/4'>
 <img src={imgHomePage} alt='' className='object-cover'/>
       </div>
       </>

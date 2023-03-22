@@ -3,6 +3,7 @@ import * as yup from 'yup';
 
 import { useDispatch } from 'react-redux';
 import { logIn } from 'redux/auth/operations';
+import imageLogin  from '../../images/imageLogin.jpg';
 
 const schema = yup.object().shape({
   email: yup.string().required(),
@@ -23,6 +24,7 @@ export const LoginForm = () => {
   };
 
   return (
+    <div className='relative flex flex-grow justify-between w-2/4 text-left  items-center'>
     <div className=' flex flex-col justify-between items-center h-96 p-4  bg-slate-600 rounded-2xl border-2 border-sky-700'>
       <Formik
         initialValues={initialValues}
@@ -54,8 +56,11 @@ export const LoginForm = () => {
           <button className ='text-gray-dark w-20 h-8 px-2 py-1 text-sm border-2 border-gray-dark rounded-lg hover:text-orange hover:border-orange curcor-pointer' type="submit" onClick={handleSubmit}>Log In</button>       
         </Form>
       </Formik>
-      <button className='text-gray-dark w-20 h-8 px-2 py-1 text-sm border-2 border-gray-dark rounded-lg hover:text-orange hover:border-orange curcor-pointer' type='button'> </button>
-     
+      <button className='text-gray-dark w-20 h-8 px-2 py-1 text-sm border-2 border-gray-dark rounded-lg hover:text-orange hover:border-orange curcor-pointer' type='button'> </button> 
+    </div>
+    <div className='hidden md:flex w-2/4'>
+<img src={imageLogin} alt='' className='object-cover'/>
+      </div>
     </div>
   );
 };

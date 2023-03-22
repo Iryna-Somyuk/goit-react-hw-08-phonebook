@@ -9,7 +9,7 @@ export const Layout = () => {
     <>
     <div className='mx-auto min-h-screen flex flex-col'>
       <AppBar />
-      <main className='container flex w-full py-4 flex-grow justify-between items-center'>
+      <main className='container bg-hero-pattern bg-cover bg-center flex w-full py-4 flex-grow justify-between items-center'>
       <Suspense fallback={null}>
         <Outlet />
       </Suspense>
@@ -20,5 +20,3 @@ export const Layout = () => {
     </>
   );
 };
-
-// style={{ maxWidth: 960, margin: '0 auto', padding: '0 16px' }}

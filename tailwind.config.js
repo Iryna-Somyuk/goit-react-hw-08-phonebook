@@ -3,9 +3,11 @@ module.exports = {
   mode: 'jit',
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    // screens: {
-    //     'xl': '1280px',
-    // },
+    screens: {
+        'sm': '480px',
+        'md': '768px',
+        'xl': '1280px',
+    },
   
     extend: {
 
@@ -35,6 +37,11 @@ module.exports = {
       fontFamily: {
         sans: ['Graphik', 'sans-serif'],
         serif: ['Merriweather', 'serif'],
+      },
+
+      backgroundImage: {
+        'hero-pattern': "url('/src/images/imgBg.jpg')",
+    
       },
       // boxShadow: {
       //   '3xl': '0 15px 10px -15px rgba(0, 0, 0, 0.3)',

@@ -5,7 +5,7 @@ export const Navigation = () => {
   const { isLoggedIn } = useAuth();
 
   return (
-    <nav className="flex space-x-4">
+    <nav className="hidden md:flex space-x-4">
       <NavLink
         className="curcor-pointer text-gray-dark text-xl font-bold"
         to="/"
