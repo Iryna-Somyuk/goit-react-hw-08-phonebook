@@ -9,7 +9,7 @@ export const Layout = () => {
     <>
     <div className='mx-auto min-h-screen flex flex-col'>
       <AppBar />
-      <main className='container bg-hero-pattern bg-cover bg-center flex w-full py-4 flex-grow justify-between items-center'>
+      <main className='container bg-hero-pattern bg-cover bg-center flex md:flex-grow justify-center w-full py-4  md:justify-between items-center'>
       <Suspense fallback={null}>
         <Outlet />
       </Suspense>

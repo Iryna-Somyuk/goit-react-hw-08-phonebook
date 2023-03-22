@@ -25,7 +25,7 @@ export const LoginForm = () => {
 
   return (
     <div className='relative flex flex-grow justify-between w-2/4 text-left  items-center'>
-    <div className=' flex flex-col justify-between items-center h-96 p-4  bg-slate-600 rounded-2xl border-2 border-sky-700'>
+    <div className=' flex flex-col justify-between items-center h-96 p-4  bg-teal-700 rounded-2xl border-2 border-sky-700'>
       <Formik
         initialValues={initialValues}
         validationSchema={schema}

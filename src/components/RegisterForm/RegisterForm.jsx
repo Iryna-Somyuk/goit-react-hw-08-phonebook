@@ -27,7 +27,7 @@ export const RegisterForm = () => {
 
   return (
     <div className='relative flex flex-grow justify-between w-2/4 text-left  items-center'>
-    <div className=' flex flex-col justify-between items-center h-full p-4  bg-slate-600 rounded-2xl border-2 border-sky-700'>
+    <div className=' flex flex-col justify-between items-center h-full p-4  bg-teal-700 rounded-2xl border-2 border-sky-700'>
       <Formik
         initialValues={initialValues}
         validationSchema={schema}
@@ -82,7 +82,7 @@ export const RegisterForm = () => {
             />
           </label>
           <button
-            className="text-gray-dark w-20 h-8 px-2 py-1 text-sm border-2 border-gray-dark rounded-lg hover:text-orange hover:border-orange curcor-pointer"
+            className="text-gray-dark w-20 h-8 px-2 py-1 text-sm border-2 font-medium border-gray-dark rounded-lg hover:text-orange  hover:border-orange curcor-pointer"
             type="submit"
           >
             Register

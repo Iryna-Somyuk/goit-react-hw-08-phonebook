@@ -36,8 +36,8 @@ const clickBtnHandler = ({ currentTarget: { name } }) => {
         {name}: {number}
       </span>
       <div>
-      <button className='p-1 justify-center items-center w-16 h-7 border-none rounded text-black text-sm bg-fuchsia-500 hover:bg-fuchsia-400' type="button" name="edit" onClick={clickBtnHandler}>Edit</button>
-      <button className='p-1 ml-2 justify-center items-center w-16 h-7 border-none rounded text-black text-sm bg-fuchsia-500 hover:bg-fuchsia-400' onClick={handleDeleteContact}>Delete</button>
+      <button className='p-1 justify-center items-center w-14 h-6 text-xs md:w-16 md:h-7 border-2 rounded text-black md:text-sm bg-[#bd9247] hover:bg-transparent hover:border-[#bd9247]' type="button" name="edit" onClick={clickBtnHandler}>Edit</button>
+      <button className='p-1 ml-2 justify-center items-center w-14 h-6 text-xs md:w-16 md:h-7 border-2 rounded text-black md:text-sm bg-[#bd9247] hover:bg-transparent hover:border-[#bd9247]' onClick={handleDeleteContact}>Delete</button>
       </div>
     </li>
     {contactId && btnName === 'edit' && (

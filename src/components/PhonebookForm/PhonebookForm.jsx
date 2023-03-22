@@ -62,7 +62,7 @@ export const PhonebookForm = () => {
             />
             <ErrorMessage className='text-rose-700 text-xs font-normal' name="number" component="span" />
           </label>
-          <button className='p-1 justify-center items-center w-28 h-8 border-none rounded text-black text-sm bg-fuchsia-500 hover:bg-fuchsia-400' type="submit">Add contact</button>
+          <button className='p-1 justify-center items-center w-28 h-8 border-2 rounded text-black text-sm bg-[#bd9247] hover:bg-transparent hover:border-[#bd9247]' type="submit">Add contact</button>
         </Form>
       </Formik>
       <Toaster position="top-center" reverseOrder={true} />

@@ -11,8 +11,9 @@ export const UserMenu = () => {
 
   return (
     <div className="flex items-center gap-3">
-      <p className="font-bold text-md text-violet-600">
-        <span className="font-bold text-md text-black">Welcome, </span>
+      <span className="font-bold text-md md:text-lg text-black">Welcome, </span>
+      <p className="font-bold text-md md:text-lg text-sky-600 underline">
+        {' '}
         {user.name}!
       </p>
       <button

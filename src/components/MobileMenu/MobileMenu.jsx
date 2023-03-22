@@ -35,14 +35,14 @@ export const MobileMenu = () => {
         </NavLink>
       )}
       <NavLink
-        className="text-white text-xl  hover:text-orange hover:underline curcor-pointer"
+        className="text-white text-xl font-bold  hover:text-orange hover:underline curcor-pointer"
         to="/register"
         onClick={handleNav}
       >
         Register
       </NavLink>
       <NavLink
-        className="text-white text-xl  hover:text-orange hover:underline curcor-pointer"
+        className="text-white text-xl font-bold  hover:text-orange hover:underline curcor-pointer"
         to="/login"
         onClick={handleNav}
       >

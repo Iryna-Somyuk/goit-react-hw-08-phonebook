@@ -22,14 +22,7 @@ module.exports = {
         },
       },
       colors: {
-        // transparent: 'transparent',
-        // current: 'currentColor',
-        'blue': '#1fb6ff',
-        'purple': '#7e5bef',
-        'pink': '#ff49db',
         'orange': '#ff7849',
-        'green': '#13ce66',
-        'yellow': '#ffc82c',
         'gray-dark': '#273444',
         'gray': '#8492a6',
         'gray-light': '#d3dce6',
@@ -43,9 +36,9 @@ module.exports = {
         'hero-pattern': "url('/src/images/imgBg.jpg')",
     
       },
-      // boxShadow: {
-      //   '3xl': '0 15px 10px -15px rgba(0, 0, 0, 0.3)',
-      // }
+      boxShadow: {
+        '3xl': '0 15px 10px -15px rgba(0, 0, 0, 0.3)',
+      }
     },
   },
   plugins: [],
